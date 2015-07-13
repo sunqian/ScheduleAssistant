@@ -1,0 +1,31 @@
+$def with(users)
+$:render.header()
+
+<script src="$config.static/styles/jquery-2.1.0.min.js"></script>
+<script src="$config.static/styles/test.js"></script>
+</script>
+
+<div class="container logout mytable">
+      <button class="btn btn-primary" onclick="location.href='data'"/> 排班表 </button>
+</div>
+
+<div class = "container mytable">
+  <table class = "table table-bordered table-striped">
+    <tr>
+      <th>name</th>
+      <th>duty</th>
+      <th>actual</th>
+    </tr>
+    $for user in users:
+      <tr>
+        <th>$user.s_name</th>
+        <td>$user.time_duty</td>
+        <td>$user.time_actual</td>
+      </tr>
+  </table>
+  <div class="container clear mytable">
+    <!-- button class='btn btn-primary' onclick='location.href="userclear"'>清零</button -->
+    <button class='btn btn-primary' onclick='location.href="userclear"'>清零</button>
+  </div>
+</div>
+$:render.foot()
