@@ -31,4 +31,4 @@ class Userdelete:
 
     def GET(self, sid):
         ArrangeManager.userDelete(sid)
-        raise web.seeother('/schedule/userinfo')
+        raise web.seeother('/schedule/data')

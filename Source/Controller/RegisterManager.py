@@ -13,4 +13,4 @@ def register(my_id, my_name, my_pass):
     
     if not result:
         UserTable.insert(my_id, my_name, my_pass)
-            return 'RGSuccess'
+        return 'RGSuccess'
